@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+      function getLocation() {
+    if (navigator.geolocation) {
+      var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+      navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position) {
+    console.log("showposition: " + JSON.stringify(position));
+  }
+
+  function showError(error) {
+    console.log("error");
+  }
+    </script>
+  </head>
+  <body>
+      <button type="button" name="button" onclick="getLocation()">Click here</button>
+  </body>
+
+
+</html>
