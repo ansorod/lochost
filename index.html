@@ -6,26 +6,26 @@
 
     <script type="text/javascript">
 
-      function getLocation() {
-    if (navigator.geolocation) {
-      var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
-      navigator.geolocation.getCurrentPosition(showPosition, showError, options);
-    } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
+        function getLocation() {
+            if (navigator.geolocation) {
+                var options = {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                  };
+                navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+            } else {
+              console.log("Geolocation is not supported by this browser.");
+            }
+        }
 
-  function showPosition(position) {
-    console.log("showposition: " + JSON.stringify(position));
-  }
+          function showPosition(position) {
+            console.log("showposition: " + JSON.stringify(position));
+          }
 
-  function showError(error) {
-    console.log("error");
-  }
+          function showError(error) {
+            console.log("error");
+          }
     </script>
   </head>
   <body>
